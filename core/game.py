@@ -1,12 +1,12 @@
 import random
-from typing import Tuple, List
 from enum import Enum
+from typing import List, Tuple
 
 
 class GuessComponent(Enum):
-    fiddle: str = "Fiddle"
-    faddle: str = "Faddle"
-    flop: str = "Flop"
+    FIDDLE: str = "Fiddle"
+    FADDLE: str = "Faddle"
+    FLOP: str = "Flop"
 
     def __str__(self) -> str:
         return self.value

@@ -1,6 +1,6 @@
 import click
+
 from .game import Game, GuessComponent
-from typing import Optional, Tuple
 
 
 class EnumType(click.Choice):
@@ -29,12 +29,12 @@ def cli():
 
 @cli.command()
 def keeper():
-    """Play the keeper! The computer tries to guess your number."""
+    """Play the keeper! The computer tries to guess your number"""
 
 
 @cli.command()
 def guesser():
-    """Play the Guesser! The computer will generate a number for you to guess."""
+    """Play the Guesser! It will generate a number for you to guess"""
     click.echo(WELCOME)
     game = Game()
     while number := click.prompt(
@@ -42,7 +42,7 @@ def guesser():
     ):
         response = game.guess(number)
         click.echo(" ".join(map(str, response)))
-        if (GuessComponent.fiddle,) * 3 == response:
+        if (GuessComponent.FIDDLE,) * 3 == response:
             click.echo(f"You won in {len(game.guesses)} guesses!")
             break
 
