@@ -24,15 +24,15 @@ WELCOME = (
 
 @click.group()
 def cli():
-    """<help message 1>"""
+    """Play Fiddle Faddle Flop!"""
 
 
-@cli.group()
-def play():
-    """<help message 2>"""
+@cli.command()
+def keeper():
+    """Play the keeper! The computer tries to guess your number."""
 
 
-@play.command()
+@cli.command()
 def guesser():
     """Play the Guesser! The computer will generate a number for you to guess."""
     click.echo(WELCOME)
