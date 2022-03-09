@@ -16,10 +16,7 @@ class EnumType(click.Choice):
         return self.__enum(converted_str)
 
 
-WELCOME = (
-    "Welcome to Fiddle Faddle Flop!"
-    # 'Fiddle: "i", Faddle: "a", Flop: "a"'
-)
+WELCOME = "Welcome to Fiddle Faddle Flop!"
 
 
 @click.group()
